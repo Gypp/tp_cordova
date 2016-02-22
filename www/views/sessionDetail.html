@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script>
+    var app = ons.bootstrap();
+    </script>
+
+</head>
+<body>
+
+    <ons-page id="sessionDetailPage">
+        <ons-toolbar>
+            <div class="left"><ons-back-button>Back</ons-back-button></div>
+            <div class="center">Session</div>
+            <div class="right">
+                <!-- <ons-toolbar-button><ons-icon icon="ion-gear-a" style="vertical-align: -4px; font-size: 28px;"></ons-icon></ons-toolbar-button> -->
+            </div>
+        </ons-toolbar>
+
+        <div id="sessionDetail" class="session-detail">
+            <div class="favorite">
+                <ons-icon icon="fa-heart" fixed-width="false"></ons-icon>
+            </div>
+            <h1 id="sessionTitle"></h2>
+                <div class="rating">
+                    <ons-icon icon="fa-star" fixed-width="false"></ons-icon>
+                    <ons-icon icon="fa-star" fixed-width="false"></ons-icon>
+                    <ons-icon icon="fa-star" fixed-width="false"></ons-icon>
+                    <ons-icon icon="fa-star" fixed-width="false"></ons-icon>
+                    <ons-icon icon="fa-star" fixed-width="false"></ons-icon>
+                </div>
+                <p id="sessionSalle">Salle: </p>
+                <h2 id="sessionSpeaker"></h2>
+                <ons-button modifier="large" onclick="app.navi.pushPage('views/notes.html')">Mes notes</ons-button>
+                <p id="sessionDesc"></p>
+            </div>
+        </ons-page>
+    </body>
+    </html>

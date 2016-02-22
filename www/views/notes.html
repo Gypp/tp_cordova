@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script>
+      var app = ons.bootstrap();
+    </script>
+
+  </head>
+  <body>
+
+    <ons-page id="notesPage">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Mes notes</div>
+        <div class="right">
+          <!-- <ons-toolbar-button><ons-icon icon="ion-gear-a" style="vertical-align: -4px; font-size: 28px;"></ons-icon></ons-toolbar-button> -->
+        </div>
+      </ons-toolbar>
+
+      <div id="note">
+        <h3 id="titleSessionNote"></h3>
+        <div>
+            <ons-button modifier="outline" onclick="takePhoto()"><ons-icon icon="fa-camera" size="20px"></ons-icon></ons-button>
+            <ons-button modifier="outline" onclick="pickImage()"><ons-icon icon="fa-image" size="20px"></ons-icon></ons-button>
+            <ons-button modifier="outline" onclick="recordSound()"><ons-icon icon="fa-microphone" size="20px"></ons-icon></ons-button>
+            <ons-button modifier="outline" onclick="recordVideo()"><ons-icon icon="fa-video-camera" size="20px"></ons-icon></ons-button>
+        </div>
+        <ons-button modifier="large" onclick="onSaveNotes()">Enregistrer</ons-button>
+        <textarea id="mesNotes" class="notes" rows="10" placeholder="Mes notes"></textarea>
+        <div id="images"></div>
+        <div id="audio"></div>
+        <div id="video"></div>
+      </div>
+    </ons-page>
+  </body>
+</html>
